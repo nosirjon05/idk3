@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ona-tili</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+
+
+
+
+
+
+<div class="question">
+  <p>Imloviy jihatdan <strong>to'g'ri</strong> yozilgan so'zlar qatorini aniqlang</p>
+  <ul class="list">
+    <li class="style"><label><input type="radio" name="q1" value="3"> a) biryo'la, antivirus, kamqonlik</label></li>
+    <li class="style"><label><input type="radio" name="q1" value="4"> b) kabobfurush, shahdam, tabiiy</label></li>
+    <li class="style"><label><input type="radio" name="q1" value="5"> c) kinodramma, izdihom, jilovbardor</label></li>
+    <li class="style"><label><input type="radio" name="q1" value="6"> d) taajub, qontalash, kamarbasta</label></li>
+  </ul>
+  <button id="submit1">Submit</button>
+  <p id="result1"></p>
+</div>
+
+<script>
+document.getElementById('submit1').addEventListener('click', function(){
+  const selected = document.querySelector('input[name="q1"]:checked');
+  const resultEl = document.getElementById('result1');
+  if (!selected) {
+    resultEl.textContent = 'Tanlasenchi bittasini.';
+  } else {
+    if (selected.value === '3') {
+      resultEl.textContent = 'To\'g\'ri!';
+    } else {
+      resultEl.textContent = 'Noto\'ri -_-.';
+    }
+  }
+});
+</script> 
+</body>
+</html>
